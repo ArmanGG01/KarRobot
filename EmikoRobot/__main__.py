@@ -462,7 +462,7 @@ def emiko_about_callback(update, context):
                         InlineKeyboardButton(text="Support", url="t.me/obrolansuar"),
                         InlineKeyboardButton(
                             text="Updates", url="https://t.me/DeployBot01"),
-                        ),
+
                     ],
                     [
                         InlineKeyboardButton(text="Go Back", callback_data="karman_"),
