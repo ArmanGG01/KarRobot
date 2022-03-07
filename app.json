@@ -1,5 +1,5 @@
 {
-      "name": "Emiko Robot",
+      "name": "Karman Robot",
       "description": "A Powerful  Telegram group management bot with anime theme.",
       "keywords": [
          "telegram",
@@ -9,8 +9,8 @@
          "naorobot"
       ],
     
-   "logo":    "https://telegra.ph/file/35e56ba7eace7332356ad.jpg",  
-   "repository": "https://github.com/kennedy-ex/https://github.com/kennedy-ex/EmikoRobot",
+   "logo":    "https://telegra.ph/file/3f4c55755b365077bfc05.jpg",  
+   "repository": "https://github.com/ArmanGG01/https://github.com/ArmanGG01/KarRobot",
    "addons": [
           {
          "options": {
@@ -46,7 +46,7 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "2088106582"
+         "value": "1694909518"
      },
 
       "STRING_SESSION": {
@@ -64,7 +64,7 @@
       },
       "BOT_USERNAME": {
          "description": "username of your bot without the @",
-         "value": "emiexrobot"
+         "value": "KarmanRobot_bot"
       },
 
       "BOT_ID": {
@@ -74,12 +74,12 @@
 
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "excrybaby"
+         "value": "PakkPoll"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "emikosupport"
+         "value": "obrolansuar"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
@@ -95,24 +95,24 @@
         "required": false
      },
      "EVENT_LOGS": {
-         "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
+         "description": "Event logs channel to note down important bot level events, recommend to make this public.: '-123456'",
          "required": true,
-         "value": "-1001626554919"
+         "value": "-1001302879778"
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
-         "value": "-1001626554919"
+         "value": "-1001302879778"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
          "required": true,
-         "value": "-xyz"
+         "value": "-kar"
       },
       "TIME_API_KEY": {
          "description": "Required for timezone information. Get yours from https://timezonedb.com/api",
          "required": true,
-         "value": "-xyz"
+         "value": "-kar"
      }, 
 
       "OPENWEATHERMAP_ID": {
@@ -166,11 +166,11 @@
          "value": ""
       },
       "ENV": {
-         "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
-         "value": "ANYTHING"
+         "description": "Setting this to KONTOL will enable environment variables. Leave it as it is",
+         "value": "KONTOL"
       },
       "WEBHOOK": {
-         "description": "Setting this to ANYTHING will enable webhooks. If you dont know how this works leave it as it is",
+         "description": "Setting this to KONTOL will enable webhooks. If you dont know how this works leave it as it is",
          "required": false,
          "value": ""
       },
