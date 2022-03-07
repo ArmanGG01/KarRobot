@@ -401,7 +401,7 @@ def emiko_about_callback(update, context):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Go Back", callback_data="karman_back"
+                            text="Go Back", callback_data="emikoback"
                         ),
                     ],
                 ]
@@ -436,7 +436,7 @@ def emiko_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="karman_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
             ),
         )
 
@@ -448,7 +448,7 @@ def emiko_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="karman_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
             ),
         )
     elif query.data == "karman_support":
@@ -465,7 +465,7 @@ def emiko_about_callback(update, context):
 
                     ],
                     [
-                        InlineKeyboardButton(text="Go Back", callback_data="karman_"),
+                        InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
                     ],
                 ]
             ),
@@ -474,7 +474,7 @@ def emiko_about_callback(update, context):
     elif query.data == "karman_credit":
         query.message.edit_text(
             text=f"๏ Credis for Karman\n"
-            "\nHere Developers Making And Give Inspiration For Made The KarRobot",
+            "\nHere Developers Making And Give Inspiration For Made The EmikoRobot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
