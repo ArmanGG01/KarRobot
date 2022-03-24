@@ -63,7 +63,7 @@ async def logo_gen(event):
     else:
         pics = []
         async for i in ubot2.iter_messages(
-            "@KenLogopack", filter=InputMessagesFilterPhotos
+            "@KarmanLogo", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
         id_ = random.choice(pics)
@@ -73,7 +73,7 @@ async def logo_gen(event):
     if not bg_:
         pics = []
         async for i in ubot2.iter_messages(
-            "@KenLogopack", filter=InputMessagesFilterPhotos
+            "@KarmanLogo", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
         id_ = random.choice(pics)
@@ -114,7 +114,7 @@ async def logo_gen(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Emiko Robot](https://t.me/EmiexRobot)",
+            caption="Logo by [Karman Robot](https://t.me/KarmanRobot_bot)",
             force_document=False,
         )
         os.remove(flnme)
@@ -147,7 +147,7 @@ async def logo_(event):
     else:
         pics = []
         async for i in ubot2.iter_messages(
-            "@kenlogopack", filter=InputMessagesFilterPhotos
+            "@KarmanLogo", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
         id_ = random.choice(pics)
@@ -157,7 +157,7 @@ async def logo_(event):
     if not bg_:
         pics = []
         async for i in ubot2.iter_messages(
-            "@kenlogopack", filter=InputMessagesFilterPhotos
+            "@KarmanLogo", filter=InputMessagesFilterPhotos
         ):
             pics.append(i)
         id_ = random.choice(pics)
@@ -198,7 +198,7 @@ async def logo_(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Emiko Robot](https://t.me/EmiexRobot)",
+            caption="Logo by [Karman Robot](https://t.me/KarmanRobot_bot)",
             force_document=False,
         )
         os.remove(flnme)
