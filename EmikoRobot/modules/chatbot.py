@@ -65,14 +65,14 @@ async def hmm(_, message):
             await lel.edit("Emiko AI Already Activated In This Chat")
             return
         await lel.edit(
-            f"Emiko AI Actived by {message.from_user.mention()} for users in {message.chat.title}"
+            f"Karman AI Actived by {message.from_user.mention()} for users in {message.chat.title}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await edit_or_reply(message, "`Processing...`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
-            await lel.edit("Emiko AI Was Not Activated In This Chat")
+            await lel.edit("Karman AI Was Not Activated In This Chat")
             return
         await lel.edit(
             f"Emiko AI Deactivated by {message.from_user.mention()} for users in {message.chat.title}"
@@ -133,7 +133,7 @@ async def hmm(client, message):
         )
         test = test.replace("I was created by @PakkPoll", "I made myself")
         test = test.replace(
-            "Hello there I am Emiko...nice to meet u",
+            "Hello there I am Karman...nice to meet u",
             "Hi, my friend! Do you want me to tell you a joke?",
         )
         test = test.replace("@PakkPoll is my owner", "Have the control right.")
@@ -154,7 +154,7 @@ async def hmm(client, message):
             "I'm married to my job.", "I'm married with @PakkPoll"
         )
         response = response.replace("I'm single.", "My husband is @PakkPoll")
-        response = response.replace("Emikobot.ai", "@obrolansuar")
+        response = response.replace("Karmanbot.ai", "@obrolansuar")
         response = response.replace(
             "I live in Indonesia, Medan.", "I live in @obrolansuar."
         )
