@@ -62,7 +62,7 @@ async def hmm(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("Emiko AI Already Activated In This Chat")
+            await lel.edit("Karman AI Already Activated In This Chat")
             return
         await lel.edit(
             f"Karman AI Actived by {message.from_user.mention()} for users in {message.chat.title}"
@@ -75,7 +75,7 @@ async def hmm(_, message):
             await lel.edit("Karman AI Was Not Activated In This Chat")
             return
         await lel.edit(
-            f"Emiko AI Deactivated by {message.from_user.mention()} for users in {message.chat.title}"
+            f"Karman AI Deactivated by {message.from_user.mention()} for users in {message.chat.title}"
         )
 
     elif status == "EN" or status == "en" or status == "english":
@@ -346,7 +346,7 @@ async def inuka(client, message):
     )
     test = test.replace("@PakkPoll is my owner", "Have the control right.")
     test = test.replace(
-        "Hi, My name is Emiko Nice to meet you.",
+        "Hi, My name is Karman Nice to meet you.",
         "Hi, my friend, what can I do for you today?",
     )
 
