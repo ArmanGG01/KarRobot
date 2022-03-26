@@ -33,7 +33,7 @@ async def repo(_, message):
         photo=MEMEK,
         caption=f"""✨ **Hey I'm Karman Robot** 
 
-**Owner repo : [sena-ex](https://t.me/PakkPoll)**
+**Owner repo : [Arman](https://t.me/PakkPoll)**
 **Python Version :** `{y()}`
 **Library Version :** `{o}`
 **Telethon Version :** `{s}`
