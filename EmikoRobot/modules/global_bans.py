@@ -29,16 +29,16 @@ from EmikoRobot import (
     sw,
     dispatcher,
 )
-from PrimeMega.modules.helper_funcs.chat_status import (
+from EmikoRobot.modules.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from PrimeMega.modules.helper_funcs.extraction import (
+from EmikoRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from PrimeMega.modules.helper_funcs.misc import send_to_list
+from EmikoRobot.modules.helper_funcs.misc import send_to_list
 
 GBAN_ENFORCE_GROUP = 6
 
