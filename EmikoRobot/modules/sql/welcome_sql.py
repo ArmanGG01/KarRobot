@@ -18,7 +18,7 @@ DEFAULT_WELCOME_MESSAGES = [
     "{first} Kenapa Bergabung Ke Sini, Mau Ikut Masuk Neraka?",
     "Halo Anak Haram {first} !",
     "{first} Telah Bergabung. Semuanya, Liat Anak Anjing Ini!",
-    "Selamat Datang, {first}. Tetap Bertahan Yaaa.",
+    "Selamat Datang {first}. Tetap Bertahan Yaaa.",
     "Selamat Datang Anak Kontol, {first}",
     "Selamat Datang, {first}. Keluarkan Sejanta Mu Mari Kita Perang.",
 ]
