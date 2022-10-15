@@ -12,17 +12,17 @@ from alphabet_detector import AlphabetDetector
 import EmikoRobot.modules.sql.locks_sql as sql
 from EmikoRobot import dispatcher, DRAGONS, LOGGER
 from EmikoRobot.modules.disable import DisableAbleCommandHandler
-from PrimeMega.modules.helper_funcs.chat_status import (
+from EmikoRobot.modules.helper_funcs.chat_status import (
     can_delete,
     is_user_admin,
     user_not_admin,
     is_bot_admin,
     user_admin,
 )
-from PrimeMega.modules.log_channel import loggable
-from PrimeMega.modules.connection import connected
-from PrimeMega.modules.sql.approve_sql import is_approved
-from PrimeMega.modules.helper_funcs.alternate import send_message, typing_action
+from EmikoRobot.modules.log_channel import loggable
+from EmikoRobot.modules.connection import connected
+from EmikoRobot.modules.sql.approve_sql import is_approved
+from EmikoRobot.modules.helper_funcs.alternate import send_message, typing_action
 
 ad = AlphabetDetector()
 
