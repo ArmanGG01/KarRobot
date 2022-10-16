@@ -1,9 +1,7 @@
 import asyncio
 from pyrogram import filters
-from aiohttp import ClientSession
-from Python_ARQ import ARQ
 
-from EmikoRobot import pbot as app, BOT_ID
+from EmikoRobot import pbot as app
 from EmikoRobot.utils.errors import capture_err
 from EmikoRobot.utils.permissions import adminsOnly
 from EmikoRobot.ex_plugins.dbfunctions import (
@@ -17,7 +15,6 @@ from EmikoRobot.ex_plugins.dbfunctions import (
     update_karma,
 )
 from EmikoRobot.utils.filter_groups import karma_negative_group, karma_positive_group
-from EmikoRobot import arq
 
 regex_upvote = r"^((?i)\+|\+\+|\+1|thx|thanx|thanks|pro|cool|good|👍)$"
 regex_downvote = r"^(\-|\-\-|\-1|👎|noob|weak)$"

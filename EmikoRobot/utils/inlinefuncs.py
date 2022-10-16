@@ -6,8 +6,6 @@ from re import sub as re_sub
 from sys import version as pyver
 from time import ctime, time
 import socket
-import aiohttp
-from random import randint
 from time import time
 from fuzzysearch import find_near_matches
 from motor import version as mongover
@@ -32,7 +30,6 @@ from EmikoRobot import (
 )
 from EmikoRobot import pbot as app
 from EmikoRobot import arq
-from EmikoRobot.services.keyboard import Ikb
 from EmikoRobot.utils.pluginhelper import (
     convert_seconds_to_minutes as time_convert,
     fetch,
@@ -299,7 +296,6 @@ async def torrent_func(answers, text):
                 ),
             )
         )
-        pass
     return answers
 
 

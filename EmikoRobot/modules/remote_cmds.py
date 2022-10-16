@@ -206,7 +206,7 @@ def runban(update: Update, context: CallbackContext):
         return
 
     try:
-        member = chat.get_member(user_id)
+        chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
             message.reply_text("I can't seem to find this user there")

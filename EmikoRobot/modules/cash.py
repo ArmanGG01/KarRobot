@@ -1,7 +1,7 @@
 import requests
 
 from telegram import Bot, Update
-from telegram.ext import CommandHandler, run_async
+from telegram.ext import CommandHandler
 
 from EmikoRobot import dispatcher, CASH_API_KEY
 

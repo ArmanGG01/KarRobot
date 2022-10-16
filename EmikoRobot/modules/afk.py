@@ -9,14 +9,11 @@ from EmikoRobot.modules.sql import afk_sql as sql
 from EmikoRobot.modules.users import get_user_id
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
+from telegram import Update
 from telegram.ext import (
     CallbackContext,
-    CallbackQueryHandler,
-    CommandHandler,
     Filters,
     MessageHandler,
-    run_async,
 )
 
 AFK_GROUP = 7

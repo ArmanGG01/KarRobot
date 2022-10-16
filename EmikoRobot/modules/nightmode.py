@@ -1,4 +1,3 @@
-import os
 from EmikoRobot.modules.sql.night_mode_sql import (
     add_nightmode,
     rmnightmode,
@@ -10,7 +9,6 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from telethon import functions
 from EmikoRobot.events import register
 from EmikoRobot import telethn as tbot, OWNER_ID
-from telethon import Button, custom, events
 
 hehes = ChatBannedRights(
     until_date=None,
@@ -40,18 +38,7 @@ openhehe = ChatBannedRights(
     change_info=True,
 )
 
-from telethon.tl.types import (
-    ChannelParticipantsAdmins,
-    ChatAdminRights,
-    MessageEntityMentionName,
-    MessageMediaPhoto,
-)
 
-from telethon.tl.functions.channels import (
-    EditAdminRequest,
-    EditBannedRequest,
-    EditPhotoRequest,
-)
 
 
 async def is_register_admin(chat, user):

@@ -2,7 +2,7 @@ import requests
 from EmikoRobot import dispatcher
 from EmikoRobot.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
-from telegram.ext import CallbackContext, run_async
+from telegram.ext import CallbackContext
 
 
 def ud(update: Update, context: CallbackContext):

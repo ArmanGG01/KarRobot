@@ -2,7 +2,7 @@ import html
 
 from telegram import ParseMode, Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.error import BadRequest
-from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
+from telegram.ext import CallbackContext, CommandHandler, Filters
 from telegram.utils.helpers import mention_html
 
 from EmikoRobot import DRAGONS, dispatcher
@@ -18,7 +18,6 @@ from EmikoRobot.modules.helper_funcs.chat_status import (
 
 from EmikoRobot.modules.helper_funcs.admin_rights import (
     user_can_changeinfo,
-    user_can_promote,
 )
 from EmikoRobot.modules.helper_funcs.extraction import (
     extract_user,
@@ -768,7 +767,7 @@ def adminlist(update, context):
         send_message(update.effective_message, "This command only works in Groups.")
         return
 
-    chat = update.effective_chat
+    update.effective_chat
     chat_id = update.effective_chat.id
     chat_name = update.effective_message.chat.title  # -> unused variable
 

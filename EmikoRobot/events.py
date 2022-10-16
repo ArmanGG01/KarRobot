@@ -1,6 +1,4 @@
 import inspect
-import logging
-import sys
 import re
 
 from pathlib import Path
@@ -148,12 +146,12 @@ def bot(**args):
 
 def EmikoRobot(**args):
     pattern = args.get("pattern", None)
-    disable_edited = args.get("disable_edited", False)
+    args.get("disable_edited", False)
     ignore_unsafe = args.get("ignore_unsafe", False)
     unsafe_pattern = r"^[^/!#@\$A-Za-z]"
-    group_only = args.get("group_only", False)
-    disable_errors = args.get("disable_errors", False)
-    insecure = args.get("insecure", False)
+    args.get("group_only", False)
+    args.get("disable_errors", False)
+    args.get("insecure", False)
     if pattern is not None and not pattern.startswith("(?i)"):
         args["pattern"] = "(?i)" + pattern
 

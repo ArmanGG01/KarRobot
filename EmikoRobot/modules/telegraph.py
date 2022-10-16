@@ -5,7 +5,6 @@ from EmikoRobot.events import register
 from EmikoRobot import telethn
 
 TMP_DOWNLOAD_DIRECTORY = "./"
-from telethon import events
 import os
 from PIL import Image
 from datetime import datetime

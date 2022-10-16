@@ -1,7 +1,5 @@
 import os
-import re
 import math
-import requests
 import cloudscraper
 import urllib.request as urllib
 from PIL import Image

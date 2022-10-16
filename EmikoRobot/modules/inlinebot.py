@@ -1,7 +1,6 @@
 import traceback
 
 from EmikoRobot import pbot as app
-from EmikoRobot.utils.pluginhelper import fetch
 from EmikoRobot.utils.inlinefuncs import *
 
 __MODULE__ = "Inline"

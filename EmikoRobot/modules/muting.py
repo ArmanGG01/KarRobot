@@ -12,7 +12,6 @@ from EmikoRobot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
 )
 from EmikoRobot.modules.helper_funcs.extraction import (
-    extract_user,
     extract_user_and_text,
 )
 from EmikoRobot.modules.helper_funcs.string_handling import extract_time
@@ -32,7 +31,6 @@ from telegram.error import BadRequest
 from telegram.ext import (
     CallbackContext,
     CommandHandler,
-    run_async,
     CallbackQueryHandler,
 )
 from telegram.utils.helpers import mention_html

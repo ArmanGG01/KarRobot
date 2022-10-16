@@ -3,7 +3,7 @@ from typing import List
 
 import requests
 from telegram import ParseMode, Update
-from telegram.ext import CallbackContext, run_async
+from telegram.ext import CallbackContext
 
 from EmikoRobot import StartTime, dispatcher
 from EmikoRobot.modules.helper_funcs.chat_status import sudo_plus

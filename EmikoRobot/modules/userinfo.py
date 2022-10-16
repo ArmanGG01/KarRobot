@@ -2,12 +2,7 @@ import html
 import re
 import os
 import requests
-import datetime
-import platform
-import time
 
-from psutil import cpu_percent, virtual_memory, disk_usage, boot_time
-from platform import python_version
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import events
@@ -17,12 +12,10 @@ from telegram import (
     ParseMode,
     Update,
     MessageEntity,
-    __version__ as ptbver,
     InlineKeyboardButton,
     InlineKeyboardMarkup,
 )
 from telegram.ext import CallbackContext, CommandHandler
-from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
@@ -36,11 +29,8 @@ from EmikoRobot import (
     INFOPIC,
     dispatcher,
     sw,
-    StartTime,
-    SUPPORT_CHAT,
 )
 from EmikoRobot.__main__ import STATS, TOKEN, USER_INFO
-from EmikoRobot.modules.sql import SESSION
 import EmikoRobot.modules.sql.userinfo_sql as sql
 from EmikoRobot.modules.disable import DisableAbleCommandHandler
 from EmikoRobot.modules.sql.global_bans_sql import is_user_gbanned
@@ -309,31 +299,23 @@ def info(update: Update, context: CallbackContext):
     except:
         pass  # don't crash if api is down somehow...
 
-    disaster_level_present = False
 
     if user.id == OWNER_ID:
         text += "\n\nThe Disaster level of this person is 'King'."
-        disaster_level_present = True
     elif user.id in DEV_USERS:
         text += "\n\nThis user is member of 'Prince'."
-        disaster_level_present = True
     elif user.id in DRAGONS:
         text += "\n\nThe Disaster level of this person is 'Emperor'."
-        disaster_level_present = True
     elif user.id in DEMONS:
         text += "\n\nThe Disaster level of this person is 'Governor'."
-        disaster_level_present = True
     elif user.id in TIGERS:
         text += "\n\nThe Disaster level of this person is 'Captain'."
-        disaster_level_present = True
     elif user.id in WOLVES:
         text += "\n\nThe Disaster level of this person is 'Soldier'."
-        disaster_level_present = True
     elif user.id == 1694909518:
         text += (
             "\n\nOwner Of A Bot. Queen Of @PakkPoll. Bot Name Inspired From 'JoJo'."
         )
-        disaster_level_present = True
 
     try:
         user_member = chat.get_member(user.id)

@@ -1,18 +1,13 @@
 from __future__ import unicode_literals
 import asyncio
-import math
-import io
 import os
 import time
-import requests
 import wget
 import yt_dlp
 from urllib.parse import urlparse
 from pyrogram import filters
 from pyrogram.types import Message
-from tswift import Song
 from yt_dlp import YoutubeDL
-from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
 from EmikoRobot.utils.pluginhelper import get_text, progress
 from EmikoRobot import pbot, arq
@@ -123,7 +118,7 @@ async def ytmusic(client, message: Message):
     try:
         with YoutubeDL(opts) as ytdl:
             infoo = ytdl.extract_info(url, False)
-            duration = round(infoo["duration"] / 60)
+            round(infoo["duration"] / 60)
             ytdl_data = ytdl.extract_info(url, download=True)
 
     except Exception as e:

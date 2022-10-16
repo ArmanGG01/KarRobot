@@ -1,14 +1,8 @@
 from EmikoRobot import telethn as tbot
 from EmikoRobot.events import register
 import os
-import asyncio
 import os
-import time
-from datetime import datetime
-from EmikoRobot import OWNER_ID, DEV_USERS
-from EmikoRobot import TEMP_DOWNLOAD_DIRECTORY as path
-from EmikoRobot import TEMP_DOWNLOAD_DIRECTORY
-from datetime import datetime
+from EmikoRobot import OWNER_ID
 
 water = "./EmikoRobot/resources/emiko.png"
 client = tbot

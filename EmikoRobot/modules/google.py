@@ -4,23 +4,15 @@ import glob
 import io
 import os
 import re
-import aiohttp
 import urllib.request
-from urllib.parse import urlencode
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image
 from search_engine_parser import GoogleSearch
 
 import bs4
-import html2text
 from bing_image_downloader import downloader
-from telethon import *
-from telethon.tl import functions
-from telethon.tl import types
-from telethon.tl.types import *
 
-from EmikoRobot import *
 
 from EmikoRobot.events import register
 from EmikoRobot import telethn as tbot
@@ -217,7 +209,7 @@ async def apk(e):
         page = requests.get(
             "https://play.google.com/store/search?q=" + final_name + "&c=apps"
         )
-        lnk = str(page.status_code)
+        str(page.status_code)
         soup = bs4.BeautifulSoup(page.content, "lxml", from_encoding="utf-8")
         results = soup.findAll("div", "ZmHEEd")
         app_name = (

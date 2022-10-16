@@ -1,18 +1,13 @@
 import html
-import os
 import json
 import importlib
 import time
 import re
-import sys
 import traceback
 import EmikoRobot.modules.sql.users_sql as sql
 from sys import argv
 from typing import Optional
-from telegram import __version__ as peler
-from platform import python_version as memek
 from EmikoRobot import (
-    ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
     BOT_USERNAME as bu,
@@ -52,7 +47,7 @@ from telegram.ext import (
     Filters,
     MessageHandler,
 )
-from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
+from telegram.ext.dispatcher import DispatcherHandlerStop
 from telegram.utils.helpers import escape_markdown
 
 

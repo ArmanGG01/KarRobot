@@ -5,7 +5,6 @@ import re
 import aiohttp
 from googletrans import Translator as google_translator
 from pyrogram import filters
-from aiohttp import ClientSession
 from EmikoRobot import BOT_USERNAME as bu
 from EmikoRobot import BOT_ID, pbot, arq
 from EmikoRobot.ex_plugins.chatbot import add_chat, get_session, remove_chat

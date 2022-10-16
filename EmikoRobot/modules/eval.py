@@ -9,7 +9,7 @@ from contextlib import redirect_stdout
 from EmikoRobot import LOGGER, dispatcher
 from EmikoRobot.modules.helper_funcs.chat_status import dev_plus
 from telegram import ParseMode, Update
-from telegram.ext import CallbackContext, CommandHandler, run_async
+from telegram.ext import CallbackContext, CommandHandler
 
 namespaces = {}
 
@@ -84,7 +84,7 @@ def do(func, bot, update):
     try:
         with redirect_stdout(stdout):
             func_return = func()
-    except Exception as e:
+    except Exception:
         value = stdout.getvalue()
         return f"{value}{traceback.format_exc()}"
     else:

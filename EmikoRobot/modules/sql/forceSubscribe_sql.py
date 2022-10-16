@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Numeric, Boolean
+from sqlalchemy import Column, Numeric, String
 from EmikoRobot.modules.sql import BASE, SESSION
 
 

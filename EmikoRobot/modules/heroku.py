@@ -5,7 +5,7 @@ import os
 import heroku3
 import requests
 
-from EmikoRobot import telethn as borg, HEROKU_APP_NAME, HEROKU_API_KEY, OWNER_ID
+from EmikoRobot import HEROKU_API_KEY, HEROKU_APP_NAME, OWNER_ID
 from EmikoRobot.events import register
 
 heroku_api = "https://api.heroku.com"

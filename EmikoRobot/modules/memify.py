@@ -2,7 +2,7 @@ import textwrap
 import os
 from PIL import Image, ImageFont, ImageDraw
 from EmikoRobot.events import register
-from EmikoRobot import LOGGER, TEMP_DOWNLOAD_DIRECTORY, telethn as bot
+from EmikoRobot import telethn as bot
 
 
 @register(pattern="^/mmf ?(.*)")
@@ -36,7 +36,6 @@ async def handler(event):
 async def drawText(image_path, text):
     img = Image.open(image_path)
     os.remove(image_path)
-    shadowcolor = "black"
     i_width, i_height = img.size
     if os.name == "nt":
         fnt = "ariel.ttf"

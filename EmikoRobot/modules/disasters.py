@@ -7,7 +7,6 @@ from EmikoRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
-    SUPPORT_CHAT,
     DEMONS,
     TIGERS,
     WOLVES,

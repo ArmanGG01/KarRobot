@@ -1,7 +1,5 @@
 import html
-import random
 
-from time import sleep
 from telegram import (
     ParseMode,
     Update,
@@ -13,14 +11,12 @@ from telegram.ext import (
     CallbackContext,
     Filters,
     CommandHandler,
-    run_async,
     CallbackQueryHandler,
 )
 from telegram.utils.helpers import mention_html
-from typing import Optional, List
+from typing import Optional
 from telegram import TelegramError
 
-import EmikoRobot.modules.sql.users_sql as sql
 from EmikoRobot.modules.disable import DisableAbleCommandHandler
 from EmikoRobot.modules.helper_funcs.filters import CustomFilters
 from EmikoRobot import (
@@ -318,7 +314,6 @@ def unbanb_btn(update: Update, context: CallbackContext) -> str:
                     show_alert=True,
                 )
                 return ""
-            log_message = ""
             try:
                 member = chat.get_member(user_id)
             except BadRequest:

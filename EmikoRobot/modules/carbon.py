@@ -2,7 +2,7 @@ from platform import python_version as y
 from telegram import __version__ as o
 from pyrogram import __version__ as z
 from telethon import __version__ as s
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import filters
 from EmikoRobot import pbot
 from EmikoRobot.utils.errors import capture_err

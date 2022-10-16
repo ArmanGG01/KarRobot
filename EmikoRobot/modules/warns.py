@@ -10,9 +10,7 @@ from EmikoRobot.modules.helper_funcs.chat_status import (
     can_restrict,
     is_user_admin,
     user_admin,
-    user_can_ban,
     user_admin_no_reply,
-    can_delete,
 )
 from EmikoRobot.modules.helper_funcs.extraction import (
     extract_text,
@@ -42,7 +40,6 @@ from telegram.ext import (
     DispatcherHandlerStop,
     Filters,
     MessageHandler,
-    run_async,
 )
 from telegram.utils.helpers import mention_html
 from EmikoRobot.modules.sql.approve_sql import is_approved

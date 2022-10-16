@@ -2,12 +2,7 @@ import os
 
 from gtts import gTTS
 from gtts import gTTSError
-from telethon import *
-from telethon.tl import functions
-from telethon.tl import types
-from telethon.tl.types import *
 
-from EmikoRobot import *
 
 from EmikoRobot import telethn as tbot
 from EmikoRobot.events import register

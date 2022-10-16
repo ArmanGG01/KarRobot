@@ -1,10 +1,7 @@
 from gpytranslate import Translator
-from telegram.ext import CommandHandler, CallbackContext
+from telegram.ext import CallbackContext
 from telegram import (
     Message,
-    Chat,
-    User,
-    ParseMode,
     Update,
     InlineKeyboardMarkup,
     InlineKeyboardButton,

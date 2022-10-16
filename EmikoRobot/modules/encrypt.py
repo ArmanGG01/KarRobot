@@ -1,5 +1,3 @@
-from EmikoRobot import telethn as tbot
-import os
 from EmikoRobot.events import register
 import secureme
 

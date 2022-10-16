@@ -20,7 +20,7 @@ async def _(event):
         json = open("json.json", "r")
         jsn = json.read()
         jsn = jsn.replace("512", "2000")
-        open = ("json.json", "w").write(jsn)
+        ("json.json", "w").write(jsn)
         os.system("lottie_convert.py json.json ken.tgs")
         file = "ken.tgs"
         os.remove("json.json")

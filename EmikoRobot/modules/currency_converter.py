@@ -2,7 +2,7 @@ import requests
 
 from EmikoRobot import CASH_API_KEY, dispatcher
 from telegram import Update, ParseMode
-from telegram.ext import CallbackContext, CommandHandler, run_async
+from telegram.ext import CallbackContext, CommandHandler
 
 
 def convert(update: Update, context: CallbackContext):
