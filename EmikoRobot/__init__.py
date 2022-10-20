@@ -22,11 +22,9 @@ from ptbcontrib.postgres_persistence import PostgresPersistence
 
 StartTime = time.time()
 
-
 def get_user_list(__init__, key):
     with open("{}/EmikoRobot/{}".format(os.getcwd(), __init__), "r") as json_file:
         return json.load(json_file)[key]
-
 
 # enable logging
 FORMAT = "[KarRobot] %(message)s"
@@ -37,19 +35,17 @@ logging.basicConfig(
     datefmt="[%X]",
 )
 logging.getLogger("pyrogram").setLevel(logging.INFO)
-logging.getLogger("ptbcontrib.postgres_persistence.postgrespersistence").setLevel(
-    logging.WARNING
-)
+logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 
-LOGGER = logging.getLogger("[KarRobot]")
-LOGGER.info("Karman is starting. | An Karman Project Parts. | Licensed under GPLv3.")
+LOGGER = logging.getLogger('[KarRobot]')
+LOGGER.info("Karman is starting. | An ArmanGG01 Project Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
-LOGGER.info("Project maintained by: github.com/ArmanGG01 (t.me/PakkPoll)")
+LOGGER.info("Project maintained by: github.com/ArmanGG01 (t.me/ArmanGG01)")
 
 # if version < 3.9, stop bot.
-if sys.version_info[0] < 3 or sys.version_info[1] < 9:
+if sys.version_info[0] < 3 or sys.version_info[1] < 8:
     LOGGER.error(
-        "You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting."
+        "You MUST have a python version of at least 3.8! Multiple features depend on this. Bot quitting."
     )
     sys.exit(1)
 
@@ -79,7 +75,7 @@ if ENV:
 
     try:
         WOLVES = {int(x) for x in os.environ.get("WOLVES", "").split()}
-    except ValueError:
+    except ValueError: 
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
     try:
@@ -88,7 +84,6 @@ if ENV:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     INFOPIC = bool(os.environ.get("INFOPIC", True))
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
     URL = os.environ.get("URL", "")  # Does not contain token
@@ -103,89 +98,11 @@ if ENV:
     DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
-    ARQ_API = os.environ.get("ARQ_API", None)
     DONATION_LINK = os.environ.get("DONATION_LINK")
     LOAD = os.environ.get("LOAD", "").split()
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
-    OPENWEATHERMAP_ID = os.environ.get("OPENWEATHERMAP_ID", None)
-    VIRUS_API_KEY = os.environ.get("VIRUS_API_KEY", None)
-    NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
-    DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
-    STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", False))
-    WORKERS = int(os.environ.get("WORKERS", 8))
-    BAN_STICKER = os.environ.get("BAN_STICKER", "CAADAgADOwADPPEcAXkko5EB3YGYAg")
-    ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
-    CASH_API_KEY = os.environ.get("CASH_API_KEY", None)
-    TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
-    WALL_API = os.environ.get("WALL_API", None)
-    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
-    SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
-    SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
-    LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", None)
-    CF_API_KEY = os.environ.get("CF_API_KEY", None)
-    WELCOME_DELAY_KICK_SEC = os.environ.get("WELCOME_DELAY_KICL_SEC", None)
-    BOT_ID = int(os.environ.get("BOT_ID", None))
-    ARQ_API_URL = "https://thearq.tech/"
-    ARQ_API_KEY = "BCYKVF-KYQWFM-JCMORU-RZWOFQ-ARQ"
-
-    ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-
-    try:
-        BL_CHATS = {int(x) for x in os.environ.get("BL_CHATS", "").split()}
-    except ValueError:
-        raise Exception("Your blacklisted chats list does not contain valid integers.")
-
-else:
-    from EmikoRobot.config import Development as Config
-
-    TOKEN = Config.TOKEN
-
-    try:
-        OWNER_ID = int(Config.OWNER_ID)
-    except ValueError:
-        raise Exception("Your OWNER_ID variable is not a valid integer.")
-
-    JOIN_LOGGER = Config.JOIN_LOGGER
-    OWNER_USERNAME = Config.OWNER_USERNAME
-    ALLOW_CHATS = Config.ALLOW_CHATS
-    try:
-        DRAGONS = {int(x) for x in Config.DRAGONS or []}
-        DEV_USERS = {int(x) for x in Config.DEV_USERS or []}
-    except ValueError:
-        raise Exception("Your sudo or dev users list does not contain valid integers.")
-
-    try:
-        DEMONS = {int(x) for x in Config.DEMONS or []}
-    except ValueError:
-        raise Exception("Your support users list does not contain valid integers.")
-
-    try:
-        WOLVES = {int(x) for x in Config.WOLVES or []}
-    except ValueError:
-        raise Exception("Your whitelisted users list does not contain valid integers.")
-
-    try:
-        TIGERS = {int(x) for x in Config.TIGERS or []}
-    except ValueError:
-        raise Exception("Your tiger users list does not contain valid integers.")
-
-    EVENT_LOGS = Config.EVENT_LOGS
-    WEBHOOK = Config.WEBHOOK
-    URL = Config.URL
-    PORT = Config.PORT
-    CERT_PATH = Config.CERT_PATH
-    API_ID = Config.API_ID
-    API_HASH = Config.API_HASH
-
-    DB_URL = Config._DATABASE_URL
-    MONGO_DB_URI = Config.MONGO_DB_URI
-    ARQ_API = Config.ARQ_API_KEY
-    ARQ_API_URL = Config.ARQ_API_URL
-    DONATION_LINK = Config.DONATION_LINK
-    LOAD = Config.LOAD
-    TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
     OPENWEATHERMAP_ID = Config.OPENWEATHERMAP_ID
     NO_LOAD = Config.NO_LOAD
     ERROR_LOG = Config.ERROR_LOG
@@ -205,10 +122,10 @@ else:
     SPAMWATCH_API = Config.SPAMWATCH_API
     SESSION_STRING = Config.SESSION_STRING
     INFOPIC = Config.INFOPIC
-    BOT_USERNAME = Config.BOT_USERNAME
     STRING_SESSION = Config.STRING_SESSION
     LASTFM_API_KEY = Config.LASTFM_API_KEY
     CF_API_KEY = Config.CF_API_KEY
+    MONGO_DB = Config.MONGO_DB
 
     try:
         BL_CHATS = {int(x) for x in Config.BL_CHATS or []}
@@ -218,7 +135,6 @@ else:
 # If you forking dont remove this id, just add your id. LOL...
 
 DRAGONS.add(OWNER_ID)
-DRAGONS.add(1694909518)
 DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(1694909518)
 DEV_USERS.add(2016593600)
@@ -245,6 +161,10 @@ aiohttpsession = ClientSession()
 print("[INFO]: INITIALIZING ARQ CLIENT")
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
+BOT_ID = dispatcher.bot.id
+BOT_USERNAME = dispatcher.bot.username
+BOT_NAME = dispatcher.bot.first_name
+
 ubot2 = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
 try:
     ubot2.start()
@@ -262,7 +182,6 @@ pbot = Client(
 apps = []
 apps.append(pbot)
 loop = asyncio.get_event_loop()
-
 
 async def get_entity(client, entity):
     entity_client = client
