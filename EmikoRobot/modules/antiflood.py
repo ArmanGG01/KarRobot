@@ -1,8 +1,7 @@
 import html
-from typing import Optional
 import re
 
-from telegram import Message, Chat, Update, User, ChatPermissions
+from telegram import Update, ChatPermissions
 
 from EmikoRobot import TIGERS, WOLVES, dispatcher
 from EmikoRobot.modules.helper_funcs.chat_status import (

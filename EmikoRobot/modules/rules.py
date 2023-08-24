@@ -1,4 +1,3 @@
-from typing import Optional
 
 import EmikoRobot.modules.sql.rules_sql as sql
 from EmikoRobot import dispatcher
@@ -7,10 +6,8 @@ from EmikoRobot.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
-    Message,
     ParseMode,
     Update,
-    User,
 )
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters

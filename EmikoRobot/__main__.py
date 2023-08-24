@@ -6,7 +6,6 @@ import re
 import traceback
 import EmikoRobot.modules.sql.users_sql as sql
 from sys import argv
-from typing import Optional
 from EmikoRobot import (
     CERT_PATH,
     DONATION_LINK,

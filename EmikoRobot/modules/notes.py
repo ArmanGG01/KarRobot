@@ -1,7 +1,6 @@
 import re, ast
 from io import BytesIO
 import random
-from typing import Optional
 
 import EmikoRobot.modules.sql.notes_sql as sql
 from EmikoRobot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
@@ -16,7 +15,6 @@ from EmikoRobot.modules.helper_funcs.string_handling import (
 from telegram import (
     MAX_MESSAGE_LENGTH,
     InlineKeyboardMarkup,
-    Message,
     ParseMode,
     Update,
     InlineKeyboardButton,

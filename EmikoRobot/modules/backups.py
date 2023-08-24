@@ -1,7 +1,7 @@
 import json, time, os
 from io import BytesIO
 
-from telegram import ParseMode, Message
+from telegram import ParseMode
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler
 

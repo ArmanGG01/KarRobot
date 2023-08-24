@@ -1,6 +1,6 @@
 import html
 
-from telegram import Message, Chat, ParseMode, MessageEntity
+from telegram import ParseMode, MessageEntity
 from telegram import TelegramError, ChatPermissions
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters
@@ -10,7 +10,7 @@ from telegram.utils.helpers import mention_html
 from alphabet_detector import AlphabetDetector
 
 import EmikoRobot.modules.sql.locks_sql as sql
-from EmikoRobot import dispatcher, DRAGONS, LOGGER
+from EmikoRobot import dispatcher, LOGGER
 from EmikoRobot.modules.disable import DisableAbleCommandHandler
 from EmikoRobot.modules.helper_funcs.chat_status import (
     can_delete,
