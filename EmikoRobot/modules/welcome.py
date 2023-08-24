@@ -72,6 +72,7 @@ CAPTCHA_ANS_DICT = {}
 
 from multicolorcaptcha import CaptchaGenerator
 
+
 # do not async
 def send(update, message, keyboard, backup_message):
     chat = update.effective_chat
@@ -171,7 +172,6 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
     new_members = update.effective_message.new_chat_members
 
     for new_mem in new_members:
-
         welcome_log = None
         res = None
         sent = None
@@ -195,7 +195,6 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             reply = False
 
         if should_welc:
-
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
@@ -591,10 +590,8 @@ def left_member(update: Update, context: CallbackContext):  # sourcery no-metric
         reply = False
 
     if should_goodbye:
-
         left_mem = update.effective_message.left_chat_member
         if left_mem:
-
             # Thingy for spamwatched users
             if sw is not None:
                 sw_ban = sw.get_ban(left_mem.id)

@@ -346,7 +346,7 @@ def help_button(update, context):
 
         # ensure no spinny white circle
         context.bot.answer_callback_query(query.id)
-            # query.message.delete()
+        # query.message.delete()
 
     except BadRequest:
         pass
@@ -390,9 +390,7 @@ def emiko_about_callback(update, context):
                         ),
                     ],
                     [
-                        InlineKeyboardButton(
-                            text="Go Back", callback_data="emikoback"
-                        ),
+                        InlineKeyboardButton(text="Go Back", callback_data="emikoback"),
                     ],
                 ]
             ),
@@ -451,8 +449,8 @@ def emiko_about_callback(update, context):
                     [
                         InlineKeyboardButton(text="Support", url="t.me/obrolansuar"),
                         InlineKeyboardButton(
-                            text="Updates", url="https://t.me/DeployBot01"),
-
+                            text="Updates", url="https://t.me/DeployBot01"
+                        ),
                     ],
                     [
                         InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
@@ -801,7 +799,6 @@ def migrate_chats(update: Update, context: CallbackContext):
 
 
 def main():
-
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.sendMessage(

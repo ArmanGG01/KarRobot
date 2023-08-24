@@ -53,12 +53,12 @@ def get_file_extension_from_url(url):
 def download_youtube_audio(url: str):
     global is_downloading
     with yt_dlp.YoutubeDL(
-            {
-                "format": "bestaudio",
-                "writethumbnail": True,
-                "quiet": True,
-            }
-        ) as ydl:
+        {
+            "format": "bestaudio",
+            "writethumbnail": True,
+            "quiet": True,
+        }
+    ) as ydl:
         info_dict = ydl.extract_info(url, download=False)
         if int(float(info_dict["duration"])) > 180:
             is_downloading = False

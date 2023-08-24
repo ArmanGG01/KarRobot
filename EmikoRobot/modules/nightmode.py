@@ -39,8 +39,6 @@ openhehe = ChatBannedRights(
 )
 
 
-
-
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
         return isinstance(

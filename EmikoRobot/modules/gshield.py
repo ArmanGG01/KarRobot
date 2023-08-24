@@ -172,7 +172,6 @@ async def profanity(event):
         await event.reply("`I Should Be Admin To Do This!`")
         return
     if await is_admin(event, event.message.sender_id):
-
         input = event.pattern_match.group(1)
         chats = globalchat.find({})
         if not input:
