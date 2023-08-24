@@ -107,7 +107,7 @@ async def logo_gen(event):
     draw.text(
         (x, y), name, font=font, fill="white", stroke_width=strke, stroke_fill="black"
     )
-    flnme = f"logo.png"
+    flnme = "logo.png"
     img.save(flnme, "png")
     await xx.edit("`Uploading`")
     if os.path.exists(flnme):
@@ -191,7 +191,7 @@ async def logo_(event):
     draw.text(
         (x, y), name, font=font, fill="white", stroke_width=strke, stroke_fill="black"
     )
-    flnme = f"logo.png"
+    flnme = "logo.png"
     img.save(flnme, "png")
     await xx.edit("`Uploading`")
     if os.path.exists(flnme):
