@@ -474,10 +474,7 @@ def button(update: Update, context: CallbackContext):
     user_and_admin_list = [original_user_id, OWNER_ID] + DRAGONS + DEV_USERS
 
     bot.answer_callback_query(query.id)
-    if (
-        query_type == "anime_close"
-        and query.from_user.id in user_and_admin_list
-    ):
+    if query_type == "anime_close" and query.from_user.id in user_and_admin_list:
         message.delete()
     elif (
         query_type == "anime_close"
@@ -489,9 +486,7 @@ def button(update: Update, context: CallbackContext):
         message.delete()
         progress_message = bot.sendMessage(message.chat.id, "Searching.... ")
         mal_id = data[2]
-        caption, buttons, image = get_anime_manga(
-            mal_id, query_type, original_user_id
-        )
+        caption, buttons, image = get_anime_manga(mal_id, query_type, original_user_id)
         bot.sendPhoto(
             message.chat.id,
             photo=image,
@@ -536,7 +531,6 @@ def site_search(update: Update, context: CallbackContext, site: str):
 
         result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKayo</code>: \n"
         for entry in search_result:
-
             if entry.text.strip() == "Nothing Found":
                 result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKayo</code>"
                 more_results = False

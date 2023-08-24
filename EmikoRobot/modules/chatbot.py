@@ -127,9 +127,7 @@ async def hmm(client, message):
         test = test.replace("@PakkPoll is my husband.", "I'm single.")
         test = test.replace("My husband is @PakkPoll", "I'm single.")
         test = test.replace("@obrolansuar", "KarmanRobot_bot")
-        test = test.replace(
-            "I live in @obrolansuar.", "I live in Indonesia, Medan."
-        )
+        test = test.replace("I live in @obrolansuar.", "I live in Indonesia, Medan.")
         test = test.replace("I was created by @PakkPoll", "I made myself")
         test = test.replace(
             "Hello there I am Karman...nice to meet u",
@@ -162,9 +160,7 @@ async def hmm(client, message):
             "Hi, my friend! Do you want me to tell you a joke?",
             "Hello there I am Karman...nice to meet u",
         )
-        response = response.replace(
-            "Have the control right.", "@PakkPoll is my owner."
-        )
+        response = response.replace("Have the control right.", "@PakkPoll is my owner.")
         response = response.replace(
             "Hi, my friend, what can I do for you today?",
             "Hi, My name is Karman Nice to meet you",
@@ -181,7 +177,6 @@ async def hmm(client, message):
             and [(k) for k in u if k.startswith("/")]
             and re.findall(r"\[([^]]+)]\(\s*([^)]+)\s*\)", msg) != []
         ):
-
             h = " ".join(filter(lambda x: x[0] != "@", u))
             km = re.sub(r"\[([^]]+)]\(\s*([^)]+)\s*\)", r"", h)
             tm = km.split()
@@ -189,7 +184,6 @@ async def hmm(client, message):
             hm = jm.split()
             rm = " ".join(filter(lambda x: x[0] != "/", hm))
         elif [(k) for k in u if k.startswith("@")]:
-
             rm = " ".join(filter(lambda x: x[0] != "@", u))
         elif [(k) for k in u if k.startswith("#")]:
             rm = " ".join(filter(lambda x: x[0] != "#", u))
@@ -220,9 +214,7 @@ async def hmm(client, message):
         test = test.replace("16", "9")
         test = test.replace("@PakkPoll is my husband.", "I'm single.")
         test = test.replace("@obrolansuar", "KarmanRobot_bot")
-        test = test.replace(
-            "I live in @obrolansuar.", "I live in Indonesia, Medan"
-        )
+        test = test.replace("I live in @obrolansuar.", "I live in Indonesia, Medan")
         test = test.replace("I was created by @PakkPoll", "I made myself")
         test = test.replace(
             "Hello there I am Karman...nice to meet u",
@@ -255,9 +247,7 @@ async def hmm(client, message):
             "Hi, my friend! Do you want me to tell you a joke?",
             "Hello there I am Karman...nice to meet u",
         )
-        response = response.replace(
-            "Have the control right.", "@PakkPoll is my owner."
-        )
+        response = response.replace("Have the control right.", "@PakkPoll is my owner.")
         response = response.replace(
             "Hi, my friend, what can I do for you today?",
             "Hi, My name is Emiko Nice to meet you",
@@ -292,7 +282,6 @@ async def inuka(client, message):
         and [(k) for k in u if k.startswith("/")]
         and re.findall(r"\[([^]]+)]\(\s*([^)]+)\s*\)", msg) != []
     ):
-
         h = " ".join(filter(lambda x: x[0] != "@", u))
         km = re.sub(r"\[([^]]+)]\(\s*([^)]+)\s*\)", r"", h)
         tm = km.split()
@@ -300,7 +289,6 @@ async def inuka(client, message):
         hm = jm.split()
         rm = " ".join(filter(lambda x: x[0] != "/", hm))
     elif [(k) for k in u if k.startswith("@")]:
-
         rm = " ".join(filter(lambda x: x[0] != "@", u))
     elif [(k) for k in u if k.startswith("#")]:
         rm = " ".join(filter(lambda x: x[0] != "#", u))
@@ -329,9 +317,7 @@ async def inuka(client, message):
     test = test.replace("19", "9")
     test = test.replace("@PakkPoll is my husband.", "I'm single.")
     test = test.replace("@obrolansuar", "KarmanRobot_bot")
-    test = test.replace(
-        "I live in @obrolansuar.", "I live in Indonesia, Medan."
-    )
+    test = test.replace("I live in @obrolansuar.", "I live in Indonesia, Medan.")
     test = test.replace("I was created by @PakkPoll", "I made myself")
     test = test.replace(
         "Hello there I am Karman...nice to meet u",
@@ -353,9 +339,7 @@ async def inuka(client, message):
     response = response.replace("I'm married to my job.", "I'm married with @PakkPoll")
     response = response.replace("I'm single.", "My husband is @PakkPoll")
     response = response.replace("KarmanRobot_bot", "@obrolansuar")
-    response = response.replace(
-        "I live in Indonesia, Medan.", "I live in @obrolansuar"
-    )
+    response = response.replace("I live in Indonesia, Medan.", "I live in @obrolansuar")
     response = response.replace("I made myself", "I was Created by @PakkPoll")
     response = response.replace(
         "Hi, my friend! Do you want me to tell you a joke?",
@@ -400,7 +384,6 @@ async def inuka(client, message):
         and [(k) for k in u if k.startswith("/")]
         and re.findall(r"\[([^]]+)]\(\s*([^)]+)\s*\)", msg) != []
     ):
-
         h = " ".join(filter(lambda x: x[0] != "@", u))
         km = re.sub(r"\[([^]]+)]\(\s*([^)]+)\s*\)", r"", h)
         tm = km.split()
@@ -408,7 +391,6 @@ async def inuka(client, message):
         hm = jm.split()
         rm = " ".join(filter(lambda x: x[0] != "/", hm))
     elif [(k) for k in u if k.startswith("@")]:
-
         rm = " ".join(filter(lambda x: x[0] != "@", u))
     elif [(k) for k in u if k.startswith("#")]:
         rm = " ".join(filter(lambda x: x[0] != "#", u))
@@ -440,9 +422,7 @@ async def inuka(client, message):
     test = test.replace("19", "9")
     test = test.replace("@PakkPoll is my husband.", "I'm single.")
     test = test.replace("@obrolansuar", "KarmanRobot_bot")
-    test = test.replace(
-        "I live in @obrolansuar.", "I live in Indonesia, Medan."
-    )
+    test = test.replace("I live in @obrolansuar.", "I live in Indonesia, Medan.")
     test = test.replace("I was created by @PakkPoll", "I made myself")
     test = test.replace(
         "Hello there I am Karman...nice to meet u",

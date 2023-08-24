@@ -168,11 +168,7 @@ def del_fed(update: Update, context: CallbackContext):
                         callback_data=f"rmfed_{fed_id}",
                     )
                 ],
-                [
-                    InlineKeyboardButton(
-                        text="Cancel", callback_data="rmfed_cancel"
-                    )
-                ],
+                [InlineKeyboardButton(text="Cancel", callback_data="rmfed_cancel")],
             ]
         ),
     )

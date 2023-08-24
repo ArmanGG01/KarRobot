@@ -37,7 +37,6 @@ from telegram.utils.helpers import mention_html
 
 
 def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
-
     if not user_id:
         return "⚠️ User not found"
     try:
@@ -281,9 +280,7 @@ def button(update: Update, context: CallbackContext) -> str:
             can_send_other_messages=True,
             can_add_web_page_previews=True,
         )
-        if unmuted := bot.restrict_chat_member(
-            chat.id, int(user_id), chat_permissions
-        ):
+        if unmuted := bot.restrict_chat_member(chat.id, int(user_id), chat_permissions):
             update.effective_message.edit_text(
                 f"{mention_html(member.user.id, member.user.first_name)} [<code>{member.user.id}</code>] Now can 🔊 speak again.",
                 parse_mode=ParseMode.HTML,
